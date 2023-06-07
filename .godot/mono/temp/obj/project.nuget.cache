@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "EPvFY6IuXdQnKA6CUFM7UlxhYHrw7Aigetncx7FgybJZr1V5SetS/ePhKjEEt7VljTZuUN6S11PaYuV0Kn3ktA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\samon\\Godot Projects\\Feliborous\\Feliborous.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\samon\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder\\godot.sourcegenerators\\4.0.3\\godot.sourcegenerators.4.0.3.nupkg.sha512",
+    "C:\\Users\\samon\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder\\godotsharp\\4.0.3\\godotsharp.4.0.3.nupkg.sha512",
+    "C:\\Users\\samon\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder\\godotsharpeditor\\4.0.3\\godotsharpeditor.4.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

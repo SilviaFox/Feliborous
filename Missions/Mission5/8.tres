@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://beo7kk2edftks"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_40x0r"]
+
+[resource]
+script = ExtResource("1_40x0r")
+Text = "You've ruined everything I planned out, and now here you are at my core."
+RightChar = true

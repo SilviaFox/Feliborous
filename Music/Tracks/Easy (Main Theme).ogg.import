@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://defwg2gkvly6w"
+path="res://.godot/imported/Easy (Main Theme).ogg-9e572da07767202a1f3e77106893282b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music/Tracks/Easy (Main Theme).ogg"
+dest_files=["res://.godot/imported/Easy (Main Theme).ogg-9e572da07767202a1f3e77106893282b.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

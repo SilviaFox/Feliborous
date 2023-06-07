@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bflq0shbh1owo"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_f3pdq"]
+
+[resource]
+script = ExtResource("1_f3pdq")
+Text = "Hey, back off!"
+RightChar = false

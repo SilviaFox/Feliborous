@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://eetvvqrdc5qc"]
+
+[ext_resource type="Texture2D" uid="uid://hpaeumm7gqhh" path="res://Characters/Tina/selecticon.png" id="1_8ku3e"]
+[ext_resource type="Texture2D" uid="uid://02bxn73acwjk" path="res://Characters/Tina/TinaSprite.png" id="2_4i38r"]
+[ext_resource type="Script" path="res://Scripts/Resources/Character.cs" id="2_85lm8"]
+[ext_resource type="Texture2D" uid="uid://cprbt8mavf25a" path="res://Characters/Tina/talksprite.png" id="3_2g0fd"]
+
+[resource]
+script = ExtResource("2_85lm8")
+Sprite = ExtResource("2_4i38r")
+SelectSprite = ExtResource("1_8ku3e")
+TalkSprite = ExtResource("3_2g0fd")
+Name = "Tina"
+OpeningStrat = 2
+PrimaryStrat = 1
+SecondaryStrat = 4
+StratSwitchHeight = 3

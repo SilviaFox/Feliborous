@@ -1,0 +1,703 @@
+[gd_scene load_steps=36 format=3 uid="uid://uqku71hr2s4r"]
+
+[ext_resource type="Theme" uid="uid://drxkw5l0v7k7" path="res://ui/menutheme.tres" id="1_d5qqq"]
+[ext_resource type="Script" path="res://Scripts/UI/Menu.cs" id="2_mtacr"]
+[ext_resource type="AudioStream" uid="uid://cjaq0l17glut8" path="res://Music/Tracks/Menu_Select.ogg" id="3_0pwm3"]
+[ext_resource type="Script" path="res://Scripts/UI/Settings.cs" id="4_f6rsb"]
+[ext_resource type="Script" path="res://Scripts/UI/MusicSelector.cs" id="4_t7jor"]
+[ext_resource type="Script" path="res://Scripts/UI/VolumeSlider.cs" id="5_82o5o"]
+[ext_resource type="Resource" uid="uid://cktho0ichk8ee" path="res://Music/Easy.tres" id="5_du38w"]
+[ext_resource type="Resource" uid="uid://jgmcfeholj7j" path="res://Music/Intermediate.tres" id="6_mkwao"]
+[ext_resource type="Resource" uid="uid://ma3gvva20k81" path="res://Music/Hard.tres" id="7_s1lx2"]
+[ext_resource type="Resource" uid="uid://b7hio8rqx036a" path="res://Music/Menu.tres" id="8_2qpvk"]
+[ext_resource type="Texture2D" uid="uid://c3vrsf8p7pds5" path="res://ui/logo.png" id="8_2sv16"]
+[ext_resource type="Script" path="res://Scripts/UI/RulesetButton.cs" id="9_4nbtl"]
+[ext_resource type="Script" path="res://Scripts/UI/MenuButton.cs" id="9_r3fsp"]
+[ext_resource type="Resource" uid="uid://cu61n8blqhf6h" path="res://Rulesets/DefaultRules.tres" id="10_7sigk"]
+[ext_resource type="Resource" uid="uid://dsinr00patnfo" path="res://Rulesets/Intermediate.tres" id="10_hq0ni"]
+[ext_resource type="Resource" uid="uid://bbv5v16v0qlyg" path="res://Rulesets/Party.tres" id="11_b1f2n"]
+[ext_resource type="Shader" path="res://Shaders/ui/checkerboardscroll.gdshader" id="11_q42d1"]
+[ext_resource type="Resource" uid="uid://b0wepdlujtlnj" path="res://Rulesets/Final.tres" id="11_v4rdp"]
+[ext_resource type="Resource" uid="uid://x55sbpdjq2id" path="res://Rulesets/HighStakes.tres" id="12_l1o37"]
+[ext_resource type="Texture2D" uid="uid://cxr38kfh5t16m" path="res://ui/spike.png" id="13_1uc3i"]
+[ext_resource type="Shader" path="res://Shaders/ui/scrolltext.gdshader" id="13_fhvcq"]
+[ext_resource type="Script" path="res://Scripts/BackgroundSelector.cs" id="14_u38wf"]
+[ext_resource type="Resource" uid="uid://djmmp68rje7gg" path="res://Rulesets/Classic.tres" id="15_06r2d"]
+[ext_resource type="Resource" uid="uid://dhcx5xr6yi0gk" path="res://sprites/Backgrounds/BG1.tres" id="15_p6niq"]
+[ext_resource type="Resource" uid="uid://cqigrjh4ixk8h" path="res://sprites/Backgrounds/BG2.tres" id="16_0tds4"]
+[ext_resource type="Resource" uid="uid://n8h3pgjym4uq" path="res://Rulesets/FiveColor.tres" id="16_m3eyu"]
+[ext_resource type="Resource" uid="uid://djy8bxoipk6p" path="res://sprites/Backgrounds/BG3.tres" id="17_cg4en"]
+[ext_resource type="FontFile" uid="uid://deul0r816kd15" path="res://ui/Fonts/LexendDeca-Bold.ttf" id="29_od4wt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cuyqv"]
+shader = ExtResource("11_q42d1")
+shader_parameter/color1 = Color(0.603922, 0.921569, 0.639216, 1)
+shader_parameter/color2 = Color(0.854902, 0.992157, 0.729412, 1)
+shader_parameter/speed = Vector2(0.4, 0.2)
+shader_parameter/size = 75.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_egymn"]
+shader = ExtResource("13_fhvcq")
+shader_parameter/motion = Vector2(10, 0)
+shader_parameter/scale = 1.0
+shader_parameter/offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a36ue"]
+shader = ExtResource("13_fhvcq")
+shader_parameter/motion = Vector2(-10, 0)
+shader_parameter/scale = -1.0
+shader_parameter/offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nqmi2"]
+shader = ExtResource("11_q42d1")
+shader_parameter/color1 = Color(0.54902, 0.160784, 0.341176, 1)
+shader_parameter/color2 = Color(0.690196, 0.243137, 0.501961, 1)
+shader_parameter/speed = Vector2(-0.5, -0.5)
+shader_parameter/size = 50.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_lyquh"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_j8nnk"]
+blend_mode = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_jb6xe"]
+font = ExtResource("29_od4wt")
+font_size = 12
+
+[node name="MainMenu" type="Control"]
+z_index = 5
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_d5qqq")
+script = ExtResource("2_mtacr")
+music = ExtResource("3_0pwm3")
+addedPlayerColor = Color(0, 1, 0.584314, 1)
+
+[node name="Background" type="ColorRect" parent="."]
+z_index = -1
+material = SubResource("ShaderMaterial_cuyqv")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spike" type="TextureRect" parent="Background"]
+modulate = Color(0.00392157, 0.12549, 0.188235, 1)
+z_index = 1
+material = SubResource("ShaderMaterial_egymn")
+layout_mode = 0
+offset_left = -80.0
+offset_top = 256.0
+offset_right = 589.0
+offset_bottom = 360.0
+rotation = -0.0698132
+texture = ExtResource("13_1uc3i")
+stretch_mode = 1
+
+[node name="Spike2" type="TextureRect" parent="Background"]
+modulate = Color(0.00392157, 0.12549, 0.188235, 1)
+z_index = 1
+material = SubResource("ShaderMaterial_a36ue")
+layout_mode = 0
+offset_left = -81.0
+offset_top = -47.0
+offset_right = 588.0
+offset_bottom = 57.0
+rotation = -0.0349066
+texture = ExtResource("13_1uc3i")
+stretch_mode = 1
+flip_v = true
+
+[node name="Main" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -126.0
+offset_right = 252.0
+offset_bottom = 126.0
+grow_vertical = 2
+
+[node name="Logo" type="TextureRect" parent="Main"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -28.0
+offset_right = 208.0
+offset_bottom = 16.0
+grow_vertical = 0
+texture = ExtResource("8_2sv16")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Container" type="VBoxContainer" parent="Main"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 155.0
+offset_bottom = -73.0
+grow_vertical = 2
+
+[node name="Adventure" type="Button" parent="Main/Container"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Adventure"
+script = ExtResource("9_r3fsp")
+description = "Singleplayer - Uncover the secrets of the underground temple"
+
+[node name="Versus" type="Button" parent="Main/Container"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Versus"
+script = ExtResource("9_r3fsp")
+description = "1-4 Players - Fight against friends and CPUs!"
+
+[node name="Settings" type="Button" parent="Main/Container"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Settings"
+script = ExtResource("9_r3fsp")
+description = "Change audio and video settings"
+
+[node name="Exit" type="Button" parent="Main/Container"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Exit"
+script = ExtResource("9_r3fsp")
+description = "Close the Application"
+
+[node name="Versus" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -126.0
+offset_right = 252.0
+offset_bottom = 126.0
+grow_vertical = 2
+
+[node name="Container" type="VBoxContainer" parent="Versus"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 155.0
+offset_bottom = -17.0
+grow_vertical = 2
+
+[node name="Competitive" type="Button" parent="Versus/Container"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Standard"
+script = ExtResource("9_4nbtl")
+ruleset = ExtResource("10_7sigk")
+description = "Standard Ruleset"
+
+[node name="Party" type="Button" parent="Versus/Container"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Power Battle"
+script = ExtResource("9_4nbtl")
+ruleset = ExtResource("11_b1f2n")
+description = "Great for large parties, smaller color set, larger group sizes."
+
+[node name="HighStakes" type="Button" parent="Versus/Container"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "High Stakes"
+script = ExtResource("9_4nbtl")
+ruleset = ExtResource("12_l1o37")
+description = "More garbage is sent in this mode!"
+
+[node name="Medium" type="Button" parent="Versus/Container"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Temple Rules"
+script = ExtResource("9_4nbtl")
+ruleset = ExtResource("10_hq0ni")
+description = "Same rules used in the Temple stages from Adventure Mode"
+
+[node name="Final" type="Button" parent="Versus/Container"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Core Rules"
+script = ExtResource("9_4nbtl")
+ruleset = ExtResource("11_v4rdp")
+description = "Same rules used in the Core stages from Adventure Mode"
+
+[node name="Classic" type="Button" parent="Versus/Container"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Classic"
+script = ExtResource("9_4nbtl")
+ruleset = ExtResource("15_06r2d")
+description = "Arcade-like rules, difficult to play with"
+
+[node name="FiveColor" type="Button" parent="Versus/Container"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Five Color"
+script = ExtResource("9_4nbtl")
+ruleset = ExtResource("16_m3eyu")
+description = "Standard rules with five colors"
+
+[node name="VersusLobby" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect3" type="ColorRect" parent="VersusLobby"]
+z_index = -1
+material = SubResource("ShaderMaterial_nqmi2")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VersusLobby"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 70.0
+offset_top = 53.0
+offset_right = -70.0
+offset_bottom = -53.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VersusLobby/HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Player1" type="ColorRect" parent="VersusLobby/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.988235, 0, 0.305882, 0.858824)
+
+[node name="Player3" type="ColorRect" parent="VersusLobby/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.988235, 0, 0.305882, 0.858824)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VersusLobby/HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Player2" type="ColorRect" parent="VersusLobby/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.988235, 0, 0.305882, 0.858824)
+
+[node name="Player4" type="ColorRect" parent="VersusLobby/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.988235, 0, 0.305882, 0.858824)
+
+[node name="ColorRect" type="ColorRect" parent="VersusLobby"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -20.0
+offset_right = 135.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VersusLobby/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press Any Button To Join"
+label_settings = SubResource("LabelSettings_lyquh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="VersusLobby"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press Start/Enter To Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VersusCPUSetup" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CPUs" type="OptionButton" parent="VersusCPUSetup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = 38.0
+offset_right = 68.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Music" type="OptionButton" parent="VersusCPUSetup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = -9.0
+offset_right = -32.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("4_t7jor")
+music = [ExtResource("5_du38w"), ExtResource("6_mkwao"), ExtResource("7_s1lx2"), ExtResource("8_2qpvk")]
+
+[node name="Label" type="Label" parent="VersusCPUSetup/Music"]
+layout_mode = 0
+offset_top = -32.0
+offset_right = 106.0
+offset_bottom = -9.0
+text = "Music"
+
+[node name="Background" type="OptionButton" parent="VersusCPUSetup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = -9.0
+offset_right = 168.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("14_u38wf")
+bgs = [ExtResource("15_p6niq"), ExtResource("16_0tds4"), ExtResource("17_cg4en")]
+
+[node name="Label" type="Label" parent="VersusCPUSetup/Background"]
+layout_mode = 0
+offset_top = -32.0
+offset_right = 106.0
+offset_bottom = -9.0
+text = "Background"
+
+[node name="Start" type="Button" parent="VersusCPUSetup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = 114.0
+offset_right = 53.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start"
+
+[node name="AdventureLobby" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="AdventureLobby"]
+material = SubResource("CanvasItemMaterial_j8nnk")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.0
+offset_top = -75.0
+offset_right = 101.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.964706, 0, 0.709804, 1)
+
+[node name="ColorRect" type="ColorRect" parent="AdventureLobby/ColorRect"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 37.0
+grow_horizontal = 2
+color = Color(0, 0, 0, 0.443137)
+
+[node name="Label2" type="Label" parent="AdventureLobby/ColorRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Adventure Mode"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="AdventureLobby/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press Any Button
+on the Input Device you want to use"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Settings" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_f6rsb")
+
+[node name="AudioTitle" type="Label" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -249.0
+offset_top = -100.0
+offset_right = -29.0
+offset_bottom = -52.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Audio"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Settings/AudioTitle"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -24.0
+offset_right = 32.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.345098)
+
+[node name="SoundVolume" type="HSlider" parent="Settings"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 34.0
+offset_top = -63.0
+offset_right = 278.0
+offset_bottom = -47.0
+grow_vertical = 2
+max_value = 1.0
+step = 0.1
+script = ExtResource("5_82o5o")
+targetBus = "Sounds"
+
+[node name="Label" type="Label" parent="Settings/SoundVolume"]
+layout_mode = 0
+offset_left = 256.0
+offset_right = 389.0
+offset_bottom = 23.0
+text = "Sound Volume"
+
+[node name="MusicVolume" type="HSlider" parent="Settings"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 34.0
+offset_top = -21.0
+offset_right = 278.0
+offset_bottom = -5.0
+grow_vertical = 2
+max_value = 1.0
+step = 0.1
+script = ExtResource("5_82o5o")
+targetBus = "Music"
+
+[node name="Label" type="Label" parent="Settings/MusicVolume"]
+layout_mode = 0
+offset_left = 256.0
+offset_right = 389.0
+offset_bottom = 23.0
+text = "Music Volume"
+
+[node name="VideoTitle" type="Label" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -249.0
+offset_top = 8.0
+offset_right = -29.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Video"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Settings/VideoTitle"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -11.0
+offset_right = 32.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.345098)
+
+[node name="Fullscreen" type="Button" parent="Settings"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = -110.0
+offset_right = 229.0
+offset_bottom = -72.0
+grow_vertical = 0
+text = "Toggle Fullscreen"
+
+[node name="CRT" type="Button" parent="Settings"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 254.0
+offset_top = -110.0
+offset_right = 448.0
+offset_bottom = -72.0
+grow_vertical = 0
+text = "Toggle CRT Shader"
+
+[node name="InputLabel" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -174.0
+offset_top = -52.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "A/Enter - Select
+B/Escape - Back"
+
+[node name="MenuDescription" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -286.0
+offset_top = -107.0
+offset_right = -10.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0, 0, 0, 0.329412)
+
+[node name="Description" type="Label" parent="MenuDescription"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_jb6xe")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="Main/Container/Adventure" to="." method="OpenAdventureLobby"]
+[connection signal="pressed" from="Main/Container/Versus" to="." method="OpenVersus"]
+[connection signal="pressed" from="Main/Container/Settings" to="." method="OpenSettings"]
+[connection signal="pressed" from="Main/Container/Exit" to="." method="ExitGame"]
+[connection signal="pressed" from="VersusCPUSetup/Start" to="." method="CloseMenu"]
+[connection signal="value_changed" from="Settings/SoundVolume" to="Settings/SoundVolume" method="ChangeVolume"]
+[connection signal="value_changed" from="Settings/MusicVolume" to="Settings/MusicVolume" method="ChangeVolume"]
+[connection signal="pressed" from="Settings/Fullscreen" to="Settings" method="ToggleFullscreen"]
+[connection signal="pressed" from="Settings/CRT" to="Settings" method="ToggleCRT"]

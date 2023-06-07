@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://jgmcfeholj7j"]
+
+[ext_resource type="AudioStream" uid="uid://bn2mqn12yb6e8" path="res://Music/Tracks/Intermediate.ogg" id="1_8wn22"]
+[ext_resource type="Script" path="res://Scripts/Resources/MusicTrack.cs" id="2_6h1gc"]
+
+[resource]
+script = ExtResource("2_6h1gc")
+Audio = ExtResource("1_8wn22")
+Name = "Temple"

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cn2l6i5v51v84"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_1the2"]
+
+[resource]
+script = ExtResource("1_1the2")
+Text = "State your business, witch!"
+RightChar = false

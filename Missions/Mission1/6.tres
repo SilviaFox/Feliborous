@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dtyyb5pmc10a6"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_47qkl"]
+
+[resource]
+script = ExtResource("1_47qkl")
+Text = "I saw feli users going down there. We're talking VERY powerful magic."
+RightChar = true

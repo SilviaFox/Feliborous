@@ -1,0 +1,60 @@
+[gd_scene load_steps=13 format=3 uid="uid://11aj1eirfvxb"]
+
+[ext_resource type="Script" path="res://Scripts/Player.cs" id="1_4s88f"]
+[ext_resource type="Script" path="res://Scripts/SoundManager.cs" id="3_64yp3"]
+[ext_resource type="Texture2D" uid="uid://cj158ytadrisb" path="res://sprites/newwin.png" id="3_68hmc"]
+[ext_resource type="PackedScene" uid="uid://cj6cg3tf07oit" path="res://Actors/Cross.tscn" id="3_h2wx4"]
+[ext_resource type="AudioStream" uid="uid://cjrto2wo5ca3c" path="res://sound/move.wav" id="4_efjbu"]
+[ext_resource type="Texture2D" uid="uid://cgdf6admfp8g0" path="res://sprites/newloss.png" id="4_eudkf"]
+[ext_resource type="AudioStream" uid="uid://cc38k4v4pqsgc" path="res://sound/place.wav" id="5_yolv4"]
+[ext_resource type="AudioStream" uid="uid://cpbcxtqgyo8li" path="res://sound/chomp.wav" id="6_b1yii"]
+[ext_resource type="AudioStream" uid="uid://cgcv8rmae45ch" path="res://sound/panic.wav" id="8_nrtr8"]
+[ext_resource type="AudioStream" uid="uid://demm5r8jj7u2u" path="res://sound/flicker.wav" id="8_xrmpg"]
+[ext_resource type="AudioStream" uid="uid://diqbphs5fjv1u" path="res://sound/rotate.wav" id="9_4gwqq"]
+[ext_resource type="AudioStream" uid="uid://dxt1s8jlvsfx3" path="res://sound/death.wav" id="10_e3lgk"]
+
+[node name="Player" type="Node2D"]
+process_mode = 1
+visible = false
+script = ExtResource("1_4s88f")
+crossPrefab = ExtResource("3_h2wx4")
+nextOffset = Vector2(4, 12)
+postNextOffset = Vector2(2, 30)
+dasStartTime = 0.25
+dasRampTicks = 1
+deathAnimTime = 0.2
+baseCharacterOffset = 128.0
+garbageFallTime = 1.2
+winSprite = ExtResource("3_68hmc")
+lossSprite = ExtResource("4_eudkf")
+
+[node name="FlipTimer" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+
+[node name="Sounds" type="Node" parent="."]
+script = ExtResource("3_64yp3")
+
+[node name="Shift" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("4_efjbu")
+
+[node name="Place" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("5_yolv4")
+
+[node name="Chomp" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("6_b1yii")
+
+[node name="Clear" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("5_yolv4")
+
+[node name="ClearFlicker" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("8_xrmpg")
+
+[node name="ClearStart" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("8_nrtr8")
+
+[node name="Rotate" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("9_4gwqq")
+
+[node name="Death" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("10_e3lgk")

@@ -1,0 +1,13 @@
+res://Scenes/Menus/MainMenu.tscn
+res://ui/ButtonStyles/selected.tres
+res://ui/ButtonStyles/deselected.tres
+res://ui/ButtonStyles/pressed.tres
+res://ui/menutheme.tres
+res://Music/Easy.tres
+res://Shaders/ui/checkerboardscroll.gdshader
+res://sprites/Ending/EndingCutscene.tres
+res://Scenes/Main.tscn
+res://Scenes/Menus/CharacterSelect.tscn
+res://Scenes/EndingCutscene.tscn
+res://Scenes/TitleScreen.tscn
+res://Actors/Player.tscn

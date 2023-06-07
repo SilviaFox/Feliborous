@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://cqigrjh4ixk8h"]
+
+[ext_resource type="Texture2D" uid="uid://dmsks58yomai1" path="res://sprites/Backgrounds/bg2.png" id="1_3x4ic"]
+[ext_resource type="Script" path="res://Scripts/Resources/Background.cs" id="2_eu2it"]
+
+[resource]
+script = ExtResource("2_eu2it")
+Name = "The Temple"
+Sprite = ExtResource("1_3x4ic")

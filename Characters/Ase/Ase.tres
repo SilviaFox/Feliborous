@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://b2gmd5m5y25ke"]
+
+[ext_resource type="Texture2D" uid="uid://bhfdbwx1x8cqm" path="res://Characters/Ase/selecticon.png" id="1_cvgf7"]
+[ext_resource type="Texture2D" uid="uid://dlokv57ysrcp2" path="res://Characters/Ase/AseSprite.png" id="2_88is6"]
+[ext_resource type="Texture2D" uid="uid://bseturemfl8oc" path="res://Characters/Ase/talksprite.png" id="3_3u0kc"]
+[ext_resource type="Script" path="res://Scripts/Resources/Character.cs" id="3_ki6ku"]
+
+[resource]
+script = ExtResource("3_ki6ku")
+Sprite = ExtResource("2_88is6")
+SelectSprite = ExtResource("1_cvgf7")
+TalkSprite = ExtResource("3_3u0kc")
+Name = "Ase"
+OpeningStrat = 3
+PrimaryStrat = 4
+SecondaryStrat = 4
+StratSwitchHeight = 5

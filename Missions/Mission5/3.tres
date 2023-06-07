@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://i6ssqya5puko"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_txo66"]
+
+[resource]
+script = ExtResource("1_txo66")
+Text = "In all honesty, I'm extremely disappointed"
+RightChar = true

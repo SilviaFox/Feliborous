@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=7 format=3 uid="uid://cens3u3ju6pp0"]
+
+[ext_resource type="Texture2D" uid="uid://chaifcth7t0p0" path="res://sprites/Backgrounds/bg3.png" id="1_11dkr"]
+[ext_resource type="Resource" uid="uid://ck4sf6i1iwkka" path="res://Characters/Icarus/Icarus.tres" id="2_uknrd"]
+[ext_resource type="AudioStream" uid="uid://benoy0q43xj8t" path="res://Music/Tracks/Hard.ogg" id="3_ud0ml"]
+[ext_resource type="Resource" uid="uid://cpb34fxwoypgn" path="res://Characters/Araneae/Araneae.tres" id="4_bye0v"]
+[ext_resource type="Resource" uid="uid://b0wepdlujtlnj" path="res://Rulesets/Final.tres" id="5_ykk8m"]
+[ext_resource type="Script" path="res://Scripts/Resources/Mission.cs" id="6_uk6k0"]
+
+[resource]
+script = ExtResource("6_uk6k0")
+PlayerChar = ExtResource("4_bye0v")
+EnemyChar = ExtResource("2_uknrd")
+Rules = ExtResource("5_ykk8m")
+Music = ExtResource("3_ud0ml")
+Background = ExtResource("1_11dkr")
+CPUIntellegence = 5
+CPUShiftTime = 0.1

@@ -1,0 +1,104 @@
+[gd_resource type="Theme" load_steps=20 format=3 uid="uid://drxkw5l0v7k7"]
+
+[ext_resource type="FontFile" uid="uid://deul0r816kd15" path="res://ui/Fonts/LexendDeca-Bold.ttf" id="1_7y1p6"]
+[ext_resource type="StyleBox" uid="uid://evxsslnbv5f1" path="res://ui/ButtonStyles/selected.tres" id="2_70c1h"]
+[ext_resource type="StyleBox" uid="uid://6ytpnfngc2xv" path="res://ui/ButtonStyles/deselected.tres" id="3_u0cd0"]
+[ext_resource type="StyleBox" uid="uid://dhsod8cuuxipy" path="res://ui/ButtonStyles/pressed.tres" id="4_4opem"]
+[ext_resource type="FontFile" uid="uid://c32yhyxsdj2au" path="res://ui/Fonts/LexendDeca-SemiBold.ttf" id="5_ulqxq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uqgf6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.313726)
+corner_radius_top_left = 8
+corner_radius_bottom_left = 8
+corner_detail = 6
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d3l0k"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ab2ah"]
+size = Vector2(0, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_q0ila"]
+size = Vector2(0, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ue2jx"]
+size = Vector2(0, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xwoq5"]
+size = Vector2(0, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_knu5r"]
+size = Vector2(0, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_owaxy"]
+size = Vector2(0, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_nq1kw"]
+size = Vector2(0, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_lgqq8"]
+size = Vector2(0, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0pmot"]
+size = Vector2(0, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_48mru"]
+size = Vector2(0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5pj20"]
+bg_color = Color(0.0745098, 0.403922, 0.541176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5we0"]
+bg_color = Color(0.00392157, 0.12549, 0.188235, 1)
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0.223529, 0.160784, 0.27451, 1)
+Button/colors/font_pressed_color = Color(0.380392, 1, 0.760784, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 2
+Button/constants/outline_size = 5
+Button/font_sizes/font_size = 14
+Button/fonts/font = ExtResource("1_7y1p6")
+Button/styles/disabled = null
+Button/styles/focus = ExtResource("2_70c1h")
+Button/styles/hover = ExtResource("2_70c1h")
+Button/styles/normal = ExtResource("3_u0cd0")
+Button/styles/pressed = ExtResource("4_4opem")
+HSlider/styles/slider = SubResource("StyleBoxFlat_uqgf6")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0.223529, 0.160784, 0.27451, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 4
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_7y1p6")
+Label/styles/normal = SubResource("StyleBoxEmpty_d3l0k")
+PopupMenu/fonts/font = ExtResource("5_ulqxq")
+PopupMenu/icons/checked = SubResource("PlaceholderTexture2D_ab2ah")
+PopupMenu/icons/checked_disabled = SubResource("PlaceholderTexture2D_q0ila")
+PopupMenu/icons/radio_checked = SubResource("PlaceholderTexture2D_ue2jx")
+PopupMenu/icons/radio_checked_disabled = SubResource("PlaceholderTexture2D_xwoq5")
+PopupMenu/icons/radio_unchecked = SubResource("PlaceholderTexture2D_knu5r")
+PopupMenu/icons/radio_unchecked_disabled = SubResource("PlaceholderTexture2D_owaxy")
+PopupMenu/icons/submenu = SubResource("PlaceholderTexture2D_nq1kw")
+PopupMenu/icons/submenu_mirrored = SubResource("PlaceholderTexture2D_lgqq8")
+PopupMenu/icons/unchecked = SubResource("PlaceholderTexture2D_0pmot")
+PopupMenu/icons/unchecked_disabled = SubResource("PlaceholderTexture2D_48mru")
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_5pj20")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_q5we0")

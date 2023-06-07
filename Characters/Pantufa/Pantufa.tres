@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://cg2yhy6ldlvgs"]
+
+[ext_resource type="Texture2D" uid="uid://dal6kvr0ops3" path="res://Characters/Pantufa/select.png" id="1_7e23r"]
+[ext_resource type="Texture2D" uid="uid://ccsu8pradqf6u" path="res://Characters/Pantufa/PantufaSprite.png" id="1_8v1v8"]
+[ext_resource type="Script" path="res://Scripts/Resources/Character.cs" id="2_85lm8"]
+[ext_resource type="Texture2D" uid="uid://urophbbc3sy0" path="res://Characters/Pantufa/talksprite.png" id="3_7io5h"]
+
+[resource]
+script = ExtResource("2_85lm8")
+Sprite = ExtResource("1_8v1v8")
+SelectSprite = ExtResource("1_7e23r")
+TalkSprite = ExtResource("3_7io5h")
+Name = "Pantufa"
+OpeningStrat = 0
+PrimaryStrat = 0
+SecondaryStrat = 4
+StratSwitchHeight = 10

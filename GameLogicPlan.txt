@@ -1,0 +1,6 @@
+Scene structure
+-Root
+	-Player (Input) and Logic
+		-Felis
+		-Well
+			- WellCells

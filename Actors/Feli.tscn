@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dihcbt28pfuqc"]
+
+[ext_resource type="SpriteFrames" uid="uid://3hn6nvtsbtku" path="res://sprites/Feli/FeliFrames.tres" id="1_3pvy2"]
+[ext_resource type="Script" path="res://Scripts/Feli.cs" id="2_ctyhl"]
+
+[node name="Feli" type="AnimatedSprite2D"]
+visibility_layer = 8
+z_index = 3
+sprite_frames = ExtResource("1_3pvy2")
+animation = &"yellow_contail"
+script = ExtResource("2_ctyhl")

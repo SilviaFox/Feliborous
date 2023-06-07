@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://ma3gvva20k81"]
+
+[ext_resource type="AudioStream" uid="uid://benoy0q43xj8t" path="res://Music/Tracks/Hard.ogg" id="1_5o1qi"]
+[ext_resource type="Script" path="res://Scripts/Resources/MusicTrack.cs" id="2_e0nrr"]
+
+[resource]
+script = ExtResource("2_e0nrr")
+Audio = ExtResource("1_5o1qi")
+Name = "The Core"

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://rgmsjsmx16c5"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_en5pq"]
+
+[resource]
+script = ExtResource("1_en5pq")
+Text = "You shouldn't be here."
+RightChar = true

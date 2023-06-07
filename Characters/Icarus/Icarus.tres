@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://ck4sf6i1iwkka"]
+
+[ext_resource type="Texture2D" uid="uid://uqiwas1jeaos" path="res://Characters/Icarus/selecticon.png" id="1_rtu8f"]
+[ext_resource type="Texture2D" uid="uid://bbniq34n8oa54" path="res://Characters/Icarus/IcarusSprite.png" id="2_tomqo"]
+[ext_resource type="Texture2D" uid="uid://04b81j5eg1ik" path="res://Characters/Icarus/talksprite.png" id="3_sl0fi"]
+[ext_resource type="Script" path="res://Scripts/Resources/Character.cs" id="4_4arqv"]
+
+[resource]
+script = ExtResource("4_4arqv")
+Sprite = ExtResource("2_tomqo")
+SelectSprite = ExtResource("1_rtu8f")
+TalkSprite = ExtResource("3_sl0fi")
+Name = "Icarus"
+OpeningStrat = 0
+PrimaryStrat = 4
+SecondaryStrat = 2
+StratSwitchHeight = 8

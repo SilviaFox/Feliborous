@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://d8ct47ejktng"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_ce4pe"]
+
+[resource]
+script = ExtResource("1_ce4pe")
+Text = "Good call, lets do this!"
+RightChar = true

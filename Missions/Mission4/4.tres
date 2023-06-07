@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dqeuvb4uwufsi"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_dmmb8"]
+
+[resource]
+script = ExtResource("1_dmmb8")
+Text = "A shame I'll have to defeat you, that mask is quite fashionable"
+RightChar = false

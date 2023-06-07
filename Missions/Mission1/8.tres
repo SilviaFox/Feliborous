@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b2xecm2v4h0ur"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_n36tk"]
+
+[resource]
+script = ExtResource("1_n36tk")
+Text = "Lets practice our feli battles before investigating, I'm a bit rusty."
+RightChar = false

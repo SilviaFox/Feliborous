@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dxpx2ddc33kfs"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_l785g"]
+
+[resource]
+script = ExtResource("1_l785g")
+Text = "I guess I shouldn't have underestimated a nerd like you"
+RightChar = true

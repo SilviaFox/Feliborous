@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://daanvp6enmt5m"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_weup2"]
+
+[resource]
+script = ExtResource("1_weup2")
+Text = "But you weren't invited..."
+RightChar = true

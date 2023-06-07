@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://h86qrjt1v384"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_pi0un"]
+
+[resource]
+script = ExtResource("1_pi0un")
+Text = "Wow, who would've guessed there was an entire temple down here?"
+RightChar = false

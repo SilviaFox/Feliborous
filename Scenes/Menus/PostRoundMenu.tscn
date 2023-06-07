@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwk3ja70w33do"]
+
+[ext_resource type="Script" path="res://Scripts/UI/PostRoundMenu.cs" id="1_err14"]
+[ext_resource type="Theme" uid="uid://drxkw5l0v7k7" path="res://ui/menutheme.tres" id="1_g4qro"]
+
+[node name="PostRoundMenu" type="Control"]
+z_index = 10
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_g4qro")
+script = ExtResource("1_err14")
+
+[node name="Container" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = -39.0
+offset_right = 70.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Rematch" type="Button" parent="Container"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Rematch"
+
+[node name="Menu" type="Button" parent="Container"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Back To Menu"
+
+[connection signal="pressed" from="Container/Rematch" to="." method="Rematch"]
+[connection signal="pressed" from="Container/Menu" to="." method="Menu"]

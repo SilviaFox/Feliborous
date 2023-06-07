@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://vjdgnmoa5xxb"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_fpitb"]
+
+[resource]
+script = ExtResource("1_fpitb")
+Text = "What is this place?"
+RightChar = false

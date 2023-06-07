@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://cpb34fxwoypgn"]
+
+[ext_resource type="Texture2D" uid="uid://bt36qmcmsclu3" path="res://Characters/Araneae/select.png" id="1_coaaq"]
+[ext_resource type="Texture2D" uid="uid://rdclnlkd4l2x" path="res://Characters/Araneae/AraneaeSprite.png" id="1_mfjlc"]
+[ext_resource type="Script" path="res://Scripts/Resources/Character.cs" id="2_5mn74"]
+[ext_resource type="Texture2D" uid="uid://k7sj3uitxh66" path="res://Characters/Araneae/talksprite.png" id="3_b8ymk"]
+
+[resource]
+script = ExtResource("2_5mn74")
+Sprite = ExtResource("1_mfjlc")
+SelectSprite = ExtResource("1_coaaq")
+TalkSprite = ExtResource("3_b8ymk")
+Name = "Araneae"
+OpeningStrat = 2
+PrimaryStrat = 2
+SecondaryStrat = 4
+StratSwitchHeight = 6

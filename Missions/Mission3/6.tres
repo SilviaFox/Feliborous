@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cmpk2ncdtdbju"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_6hrcx"]
+
+[resource]
+script = ExtResource("1_6hrcx")
+Text = "Theres... rewards?"
+RightChar = false

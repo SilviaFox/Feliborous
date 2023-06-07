@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://clukntd1lyq6c"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_avpeo"]
+
+[resource]
+script = ExtResource("1_avpeo")
+Text = "Thats concerning, I can't imagine what they must be going after."
+RightChar = false

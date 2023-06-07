@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bh2cacsunja7h"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_adr46"]
+
+[resource]
+script = ExtResource("1_adr46")
+Text = "You're going down!"
+RightChar = false

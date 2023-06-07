@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://c4uimldv7pw22"]
+
+[ext_resource type="FontFile" uid="uid://bemac37kh1jd4" path="res://ui/Fonts/LexendDeca-Light.ttf" id="1_gikgh"]
+
+[resource]
+Label/fonts/font = ExtResource("1_gikgh")

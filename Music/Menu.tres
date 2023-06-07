@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://b7hio8rqx036a"]
+
+[ext_resource type="AudioStream" uid="uid://cjaq0l17glut8" path="res://Music/Tracks/Menu_Select.ogg" id="1_vfq8m"]
+[ext_resource type="Script" path="res://Scripts/Resources/MusicTrack.cs" id="2_totql"]
+
+[resource]
+script = ExtResource("2_totql")
+Audio = ExtResource("1_vfq8m")
+Name = "The Choice"

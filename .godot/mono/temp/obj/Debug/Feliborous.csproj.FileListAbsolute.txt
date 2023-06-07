@@ -1,0 +1,17 @@
+C:\Users\samon\Godot Projects\Feliborous\.godot\mono\temp\bin\Debug\Feliborous.deps.json
+C:\Users\samon\Godot Projects\Feliborous\.godot\mono\temp\bin\Debug\Feliborous.runtimeconfig.json
+C:\Users\samon\Godot Projects\Feliborous\.godot\mono\temp\bin\Debug\Feliborous.dll
+C:\Users\samon\Godot Projects\Feliborous\.godot\mono\temp\bin\Debug\Feliborous.pdb
+C:\Users\samon\Godot Projects\Feliborous\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\samon\Godot Projects\Feliborous\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\samon\Godot Projects\Feliborous\.godot\mono\temp\obj\Debug\Feliborous.csproj.AssemblyReference.cache
+C:\Users\samon\Godot Projects\Feliborous\.godot\mono\temp\obj\Debug\Feliborous.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samon\Godot Projects\Feliborous\.godot\mono\temp\obj\Debug\Feliborous.AssemblyInfoInputs.cache
+C:\Users\samon\Godot Projects\Feliborous\.godot\mono\temp\obj\Debug\Feliborous.AssemblyInfo.cs
+C:\Users\samon\Godot Projects\Feliborous\.godot\mono\temp\obj\Debug\Feliborous.csproj.CoreCompileInputs.cache
+C:\Users\samon\Godot Projects\Feliborous\.godot\mono\temp\obj\Debug\Feliborous.csproj.CopyComplete
+C:\Users\samon\Godot Projects\Feliborous\.godot\mono\temp\obj\Debug\Feliborous.dll
+C:\Users\samon\Godot Projects\Feliborous\.godot\mono\temp\obj\Debug\refint\Feliborous.dll
+C:\Users\samon\Godot Projects\Feliborous\.godot\mono\temp\obj\Debug\Feliborous.pdb
+C:\Users\samon\Godot Projects\Feliborous\.godot\mono\temp\obj\Debug\Feliborous.genruntimeconfig.cache
+C:\Users\samon\Godot Projects\Feliborous\.godot\mono\temp\obj\Debug\ref\Feliborous.dll

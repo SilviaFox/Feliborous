@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://djmmp68rje7gg"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Ruleset.cs" id="1_knc16"]
+
+[resource]
+script = ExtResource("1_knc16")
+WellSize = Vector2i(8, 13)
+Bodies = true
+MinGroupSize = 2
+MaxGroupSize = 4
+Colors = 5
+GarbageReduction = 2
+Gravity = 0.4
+FastFallMultiplier = 4.0

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://btbpe4qbnmbr7"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_or0lk"]
+
+[resource]
+script = ExtResource("1_or0lk")
+Text = "Miau miau?"
+RightChar = true

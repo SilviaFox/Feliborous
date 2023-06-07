@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://0d7701gbomyb"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_vo83q"]
+
+[resource]
+script = ExtResource("1_vo83q")
+Text = "I did not fight through an entire sitcom cast to get called a nerd."
+RightChar = false

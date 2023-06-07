@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://di2jec28gey3a"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_m4b66"]
+
+[resource]
+script = ExtResource("1_m4b66")
+Text = "Well, yeah its not a particularly interesting hole on the outside, but the inside..."
+RightChar = true

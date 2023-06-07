@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=7 format=3]
+
+[ext_resource type="Texture2D" uid="uid://dmsks58yomai1" path="res://sprites/Backgrounds/bg2.png" id="1_wposr"]
+[ext_resource type="Resource" uid="uid://eetvvqrdc5qc" path="res://Characters/Tina/Tina.tres" id="2_1ql8u"]
+[ext_resource type="AudioStream" uid="uid://bn2mqn12yb6e8" path="res://Music/Tracks/Intermediate.ogg" id="3_mxo4p"]
+[ext_resource type="Resource" uid="uid://cpb34fxwoypgn" path="res://Characters/Araneae/Araneae.tres" id="4_1v5pl"]
+[ext_resource type="Resource" uid="uid://dsinr00patnfo" path="res://Rulesets/Intermediate.tres" id="5_tnu6j"]
+[ext_resource type="Script" path="res://Scripts/Resources/Mission.cs" id="6_h6xv7"]
+
+[resource]
+script = ExtResource("6_h6xv7")
+PlayerChar = ExtResource("4_1v5pl")
+EnemyChar = ExtResource("2_1ql8u")
+Rules = ExtResource("5_tnu6j")
+Music = ExtResource("3_mxo4p")
+Background = ExtResource("1_wposr")
+CPUIntellegence = 4
+CPUShiftTime = 0.2

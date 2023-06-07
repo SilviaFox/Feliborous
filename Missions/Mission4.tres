@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=7 format=3]
+
+[ext_resource type="Texture2D" uid="uid://dmsks58yomai1" path="res://sprites/Backgrounds/bg2.png" id="1_8qhfa"]
+[ext_resource type="Resource" uid="uid://bad7se773uep7" path="res://Characters/Jade/Jade.tres" id="2_ptmb1"]
+[ext_resource type="AudioStream" uid="uid://bn2mqn12yb6e8" path="res://Music/Tracks/Intermediate.ogg" id="3_hg0vj"]
+[ext_resource type="Resource" uid="uid://cpb34fxwoypgn" path="res://Characters/Araneae/Araneae.tres" id="4_4g5j1"]
+[ext_resource type="Resource" uid="uid://dsinr00patnfo" path="res://Rulesets/Intermediate.tres" id="5_lhtj1"]
+[ext_resource type="Script" path="res://Scripts/Resources/Mission.cs" id="6_ff24e"]
+
+[resource]
+script = ExtResource("6_ff24e")
+PlayerChar = ExtResource("4_4g5j1")
+EnemyChar = ExtResource("2_ptmb1")
+Rules = ExtResource("5_lhtj1")
+Music = ExtResource("3_hg0vj")
+Background = ExtResource("1_8qhfa")
+CPUIntellegence = 5
+CPUShiftTime = 0.14

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=7 format=3]
+
+[ext_resource type="Texture2D" uid="uid://k33xk1owaver" path="res://sprites/Backgrounds/bg1.png" id="1_th7a2"]
+[ext_resource type="AudioStream" uid="uid://defwg2gkvly6w" path="res://Music/Tracks/Easy (Main Theme).ogg" id="2_0wanv"]
+[ext_resource type="Resource" uid="uid://cpb34fxwoypgn" path="res://Characters/Araneae/Araneae.tres" id="5_qfcvm"]
+[ext_resource type="Resource" uid="uid://cg2yhy6ldlvgs" path="res://Characters/Pantufa/Pantufa.tres" id="6_7bbom"]
+[ext_resource type="Resource" uid="uid://cu61n8blqhf6h" path="res://Rulesets/DefaultRules.tres" id="6_op4v5"]
+[ext_resource type="Script" path="res://Scripts/Resources/Mission.cs" id="7_qhd1v"]
+
+[resource]
+script = ExtResource("7_qhd1v")
+PlayerChar = ExtResource("5_qfcvm")
+EnemyChar = ExtResource("6_7bbom")
+Rules = ExtResource("6_op4v5")
+Music = ExtResource("2_0wanv")
+Background = ExtResource("1_th7a2")
+CPUIntellegence = 4
+CPUShiftTime = 0.4

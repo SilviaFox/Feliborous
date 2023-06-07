@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b0wepdlujtlnj"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Ruleset.cs" id="1_fqx5u"]
+
+[resource]
+script = ExtResource("1_fqx5u")
+WellSize = Vector2i(8, 13)
+Bodies = false
+MinGroupSize = 4
+MaxGroupSize = 4
+Colors = 3
+GarbageReduction = 2
+Gravity = 0.1
+FastFallMultiplier = 4.0

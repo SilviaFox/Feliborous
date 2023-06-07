@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\samon\\Godot Projects\\Feliborous\\Feliborous.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\samon\\Godot Projects\\Feliborous\\Feliborous.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\samon\\Godot Projects\\Feliborous\\Feliborous.csproj",
+        "projectName": "Feliborous",
+        "projectPath": "C:\\Users\\samon\\Godot Projects\\Feliborous\\Feliborous.csproj",
+        "packagesPath": "C:\\Users\\samon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\samon\\Godot Projects\\Feliborous\\.godot\\mono\\temp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Users\\samon\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\samon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\samon\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Godot.SourceGenerators": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "GodotSharp": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "GodotSharpEditor": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

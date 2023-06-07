@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b7o5y7iws7sr2"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_hvxai"]
+
+[resource]
+script = ExtResource("1_hvxai")
+Text = "I invited extremely powerful Feli users here to challenge in battle"
+RightChar = true

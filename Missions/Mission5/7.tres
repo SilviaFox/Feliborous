@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ddvxdbiklm2ys"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_pj4rh"]
+
+[resource]
+script = ExtResource("1_pj4rh")
+Text = "I wasn't aware this was an invite-only party"
+RightChar = false

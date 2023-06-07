@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://bad7se773uep7"]
+
+[ext_resource type="Texture2D" uid="uid://c3b61d3vvcnyt" path="res://Characters/Jade/selecticon.png" id="1_5dj1e"]
+[ext_resource type="Texture2D" uid="uid://ce5noftjtswmk" path="res://Characters/Jade/JadeSprite.png" id="2_exu10"]
+[ext_resource type="Texture2D" uid="uid://1psdsnvtulhx" path="res://Characters/Jade/talksprite.png" id="3_dw1vr"]
+[ext_resource type="Script" path="res://Scripts/Resources/Character.cs" id="4_m28fu"]
+
+[resource]
+script = ExtResource("4_m28fu")
+Sprite = ExtResource("2_exu10")
+SelectSprite = ExtResource("1_5dj1e")
+TalkSprite = ExtResource("3_dw1vr")
+Name = "Jade"
+OpeningStrat = 0
+PrimaryStrat = 2
+SecondaryStrat = 4
+StratSwitchHeight = 3

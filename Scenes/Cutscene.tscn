@@ -1,0 +1,106 @@
+[gd_scene load_steps=7 format=3 uid="uid://cu4poo5niqgxd"]
+
+[ext_resource type="Script" path="res://Scripts/Cutscene.cs" id="1_f7gyy"]
+[ext_resource type="Theme" uid="uid://drxkw5l0v7k7" path="res://ui/menutheme.tres" id="1_hq6cx"]
+[ext_resource type="Texture2D" uid="uid://dt1nfabrc1cp4" path="res://sprites/textbox.png" id="2_dtom0"]
+[ext_resource type="AudioStream" uid="uid://dwq44w1exufxd" path="res://Music/Tracks/INTERACTION.ogg" id="3_fdn1n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j044u"]
+font_size = 12
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_knucf"]
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Cutscene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_hq6cx")
+script = ExtResource("1_f7gyy")
+music = ExtResource("3_fdn1n")
+
+[node name="TextBox" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dtom0")
+
+[node name="Dialogue" type="Label" parent="TextBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -103.0
+offset_right = 117.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Dialogue lol"
+label_settings = SubResource("LabelSettings_j044u")
+horizontal_alignment = 1
+autowrap_mode = 2
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="LeftChar" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -75.0
+offset_right = 228.0
+offset_bottom = 153.0
+grow_vertical = 2
+
+[node name="Name" type="Label" parent="LeftChar"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 42.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Name"
+label_settings = SubResource("LabelSettings_knucf")
+horizontal_alignment = 1
+
+[node name="RightChar" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -228.0
+offset_top = -75.0
+offset_bottom = 153.0
+grow_horizontal = 0
+grow_vertical = 2
+flip_h = true
+
+[node name="Name" type="Label" parent="RightChar"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 42.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Name"
+label_settings = SubResource("LabelSettings_knucf")
+horizontal_alignment = 1

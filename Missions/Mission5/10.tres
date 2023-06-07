@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://crkkjqduebojm"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_1mvng"]
+
+[resource]
+script = ExtResource("1_1mvng")
+Text = "Seriously who carries books around wherever they go? You disgust me."
+RightChar = true

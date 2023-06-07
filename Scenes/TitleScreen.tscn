@@ -1,0 +1,243 @@
+[gd_scene load_steps=15 format=3 uid="uid://depmqcjaaipx7"]
+
+[ext_resource type="Theme" uid="uid://c4uimldv7pw22" path="res://ui/titletheme.tres" id="1_tujij"]
+[ext_resource type="Script" path="res://Scripts/TitleScreen.cs" id="2_0t2jj"]
+[ext_resource type="AudioStream" uid="uid://j0g450db7x8s" path="res://Music/Tracks/Title Theme.ogg" id="3_hf7sl"]
+[ext_resource type="Texture2D" uid="uid://tvpqdwsdni0m" path="res://rLI7LJ.png" id="3_uw31e"]
+[ext_resource type="Shader" path="res://Shaders/ui/checkerboardscroll.gdshader" id="5_eic78"]
+[ext_resource type="Texture2D" uid="uid://c3vrsf8p7pds5" path="res://ui/logo.png" id="5_nps50"]
+[ext_resource type="Shader" path="res://Shaders/ui/scrolltext.gdshader" id="7_5gosx"]
+[ext_resource type="Texture2D" uid="uid://cxr38kfh5t16m" path="res://ui/spike.png" id="8_fu8bo"]
+[ext_resource type="Script" path="res://Scripts/UI/PressStartLabel.cs" id="9_w4lmr"]
+[ext_resource type="FontFile" uid="uid://bemac37kh1jd4" path="res://ui/Fonts/LexendDeca-Light.ttf" id="11_7axlc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oh3xo"]
+shader = ExtResource("5_eic78")
+shader_parameter/color1 = Color(0.921569, 0.607843, 0.815686, 1)
+shader_parameter/color2 = Color(0.854902, 0.14902, 0.729412, 1)
+shader_parameter/speed = Vector2(0.4, 0.4)
+shader_parameter/size = 75.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qpxat"]
+shader = ExtResource("7_5gosx")
+shader_parameter/motion = Vector2(10, 0)
+shader_parameter/scale = 1.0
+shader_parameter/offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ghkbr"]
+shader = ExtResource("7_5gosx")
+shader_parameter/motion = Vector2(-10, 0)
+shader_parameter/scale = -1.0
+shader_parameter/offset = Vector2(0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jc1ph"]
+font = ExtResource("11_7axlc")
+font_size = 12
+font_color = Color(1, 1, 1, 0.52549)
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_tujij")
+script = ExtResource("2_0t2jj")
+music = ExtResource("3_hf7sl")
+flashDuration = 2.0
+
+[node name="SplashIntro" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Created For" type="Label" parent="SplashIntro"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.0
+offset_top = -69.0
+offset_right = 91.0
+offset_bottom = 69.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Created For
+
+
+
+
+Chao Jam 2023"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="SplashIntro/Created For"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 18.0
+offset_bottom = 45.4132
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_uw31e")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Extra Credits" type="Label" parent="SplashIntro"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.0
+offset_top = -27.0
+offset_right = 91.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Thank You
+
+VAdaPEGA
+Creator of Pantufa"
+horizontal_alignment = 1
+
+[node name="Music By" type="Label" parent="SplashIntro"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.0
+offset_top = -27.0
+offset_right = 91.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Music by
+Jade Tacosoda"
+horizontal_alignment = 1
+
+[node name="Created By" type="Label" parent="SplashIntro"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.0
+offset_top = -27.0
+offset_right = 91.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Created By
+SilviaFox"
+horizontal_alignment = 1
+
+[node name="SplashTimer" type="Timer" parent="."]
+wait_time = 0.75
+
+[node name="Flash" type="ColorRect" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="Title"]
+z_index = -1
+material = SubResource("ShaderMaterial_oh3xo")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spike" type="TextureRect" parent="Title/Background"]
+modulate = Color(0.00392157, 0.12549, 0.188235, 1)
+z_index = 1
+material = SubResource("ShaderMaterial_qpxat")
+layout_mode = 0
+offset_left = -80.0
+offset_top = 210.0
+offset_right = 589.0
+offset_bottom = 314.0
+texture = ExtResource("8_fu8bo")
+stretch_mode = 1
+
+[node name="Spike2" type="TextureRect" parent="Title/Background"]
+modulate = Color(0.00392157, 0.12549, 0.188235, 1)
+z_index = 1
+material = SubResource("ShaderMaterial_ghkbr")
+layout_mode = 0
+offset_left = -81.0
+offset_top = -4.0
+offset_right = 588.0
+offset_bottom = 100.0
+texture = ExtResource("8_fu8bo")
+stretch_mode = 1
+flip_v = true
+
+[node name="Press Start" type="Label" parent="Title"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = 91.0
+offset_right = 41.5
+offset_bottom = 114.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press Start"
+horizontal_alignment = 1
+script = ExtResource("9_w4lmr")
+
+[node name="Logo" type="Sprite2D" parent="Title"]
+position = Vector2(272, 71)
+texture = ExtResource("5_nps50")
+
+[node name="Label" type="Label" parent="Title"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -139.0
+offset_top = -50.0
+offset_right = -15.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "SilviaFox
+TacoSoda"
+label_settings = SubResource("LabelSettings_jc1ph")
+horizontal_alignment = 1

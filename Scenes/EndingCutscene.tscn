@@ -1,0 +1,113 @@
+[gd_scene load_steps=10 format=3 uid="uid://dra1kob5vva5k"]
+
+[ext_resource type="Script" path="res://Scripts/EndingCutscene.cs" id="1_rii1g"]
+[ext_resource type="Script" path="res://Scripts/SoundManager.cs" id="2_4plro"]
+[ext_resource type="AudioStream" uid="uid://defwg2gkvly6w" path="res://Music/Tracks/Easy (Main Theme).ogg" id="2_mmy1w"]
+[ext_resource type="AudioStream" uid="uid://ccx8apuosvo5u" path="res://sound/ending/explosion.wav" id="3_8e6l0"]
+[ext_resource type="SpriteFrames" uid="uid://om0qw26mkh3y" path="res://sprites/Ending/EndingCutscene.tres" id="4_72nsr"]
+[ext_resource type="AudioStream" uid="uid://cbbjnq48pkqrd" path="res://sound/ending/epicwin.wav" id="4_sri5s"]
+[ext_resource type="Theme" uid="uid://drxkw5l0v7k7" path="res://ui/menutheme.tres" id="6_ilfge"]
+[ext_resource type="Texture2D" uid="uid://dox1iddqaehhh" path="res://sprites/Ending/Screenshot 2023-03-30 184917.png" id="8_qesst"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3otk3"]
+line_spacing = 5.0
+
+[node name="EndingCutscene" type="Node2D"]
+z_index = 20
+script = ExtResource("1_rii1g")
+creditsLength = 40.0
+creditsEndHeight = -780.0
+music = ExtResource("2_mmy1w")
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("4_72nsr")
+animation = &"main"
+frame = 5
+frame_progress = 1.0
+centered = false
+
+[node name="Sounds" type="Node" parent="."]
+script = ExtResource("2_4plro")
+
+[node name="Explosion" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("3_8e6l0")
+
+[node name="Epic Win" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("4_sri5s")
+
+[node name="CreditsParent" type="Node" parent="."]
+
+[node name="Credits" type="ColorRect" parent="CreditsParent"]
+z_index = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_ilfge")
+color = Color(0, 0, 0, 1)
+
+[node name="ScrollingText" type="Label" parent="CreditsParent/Credits"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.5
+offset_top = 185.0
+offset_right = 147.5
+offset_bottom = 885.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Feliboros
+Credits
+
+
+
+Created For
+Chao Jam 2023
+
+Music by
+Jade TacoSoda
+
+Thank you
+VAdaPEGA
+
+Screw you
+Danny
+
+
+
+
+
+
+
+
+Achieved with Godot 4
+
+
+
+
+Thank You for playing!"
+label_settings = SubResource("LabelSettings_3otk3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Screenshot2023-03-30184917" type="Sprite2D" parent="CreditsParent/Credits/ScrollingText"]
+position = Vector2(146.5, 499)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_qesst")
+
+[node name="Created" type="Label" parent="CreditsParent/Credits"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Created by
+SilviaFox"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://rplcq0ahlq30"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_kuque"]
+
+[resource]
+script = ExtResource("1_kuque")
+Text = "You still shouldn't be here though"
+RightChar = true

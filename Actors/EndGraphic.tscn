@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://br67j30d2jyx7"]
+
+[ext_resource type="Texture2D" uid="uid://cgdf6admfp8g0" path="res://sprites/newloss.png" id="1_eveo0"]
+
+[node name="EndGraphic" type="Sprite2D"]
+texture = ExtResource("1_eveo0")

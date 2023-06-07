@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://cktho0ichk8ee"]
+
+[ext_resource type="AudioStream" uid="uid://defwg2gkvly6w" path="res://Music/Tracks/Easy (Main Theme).ogg" id="1_lbhci"]
+[ext_resource type="Script" path="res://Scripts/Resources/MusicTrack.cs" id="2_u8snn"]
+
+[resource]
+script = ExtResource("2_u8snn")
+Audio = ExtResource("1_lbhci")
+Name = "Feliboros"

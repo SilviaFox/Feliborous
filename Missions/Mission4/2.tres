@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://t5cdw8xxvpki"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_4i1gu"]
+
+[resource]
+script = ExtResource("1_4i1gu")
+Text = "Well, THATS not a nice way to greet someone."
+RightChar = false

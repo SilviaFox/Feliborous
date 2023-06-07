@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://deuidxtlqbqp7"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_8ngih"]
+
+[resource]
+script = ExtResource("1_8ngih")
+Text = "Hey, you called?"
+RightChar = false

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dhcx5xr6yi0gk"]
+
+[ext_resource type="Texture2D" uid="uid://k33xk1owaver" path="res://sprites/Backgrounds/bg1.png" id="1_8sngd"]
+[ext_resource type="Script" path="res://Scripts/Resources/Background.cs" id="2_uae6c"]
+
+[resource]
+script = ExtResource("2_uae6c")
+Name = "The Hole"
+Sprite = ExtResource("1_8sngd")

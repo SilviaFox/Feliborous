@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ctojspxhh3662"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Dialogue.cs" id="1_7y1hv"]
+
+[resource]
+script = ExtResource("1_7y1hv")
+Text = "Welcome to the core"
+RightChar = true

@@ -1,0 +1,42 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://b7fx8gs6gbmq4"]
+
+[ext_resource type="Texture2D" uid="uid://crwkdidbc1p4m" path="res://sprites/garbagequeue.png" id="1_pcbyd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7kcv"]
+atlas = ExtResource("1_pcbyd")
+region = Rect2(20, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dwk3"]
+atlas = ExtResource("1_pcbyd")
+region = Rect2(10, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugq3v"]
+atlas = ExtResource("1_pcbyd")
+region = Rect2(0, 0, 10, 10)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7kcv")
+}],
+"loop": true,
+"name": &"large",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dwk3")
+}],
+"loop": true,
+"name": &"medium",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugq3v")
+}],
+"loop": true,
+"name": &"small",
+"speed": 5.0
+}]
